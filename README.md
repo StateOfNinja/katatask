@@ -1,4 +1,4 @@
 Первое задание 
 
 
-[Выполненное задание](https://stateofninja.github.io/katatask/)
+[Выполненное задание](https://stateofninja.github.io/katatask/src)
