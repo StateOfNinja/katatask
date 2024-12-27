@@ -13,6 +13,12 @@ box-sizing: border-box;
 
     /* General */
 
+button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .wrapper {
 max-width: 1440px;
 width: 100%;
@@ -46,14 +52,15 @@ align-items: center;
 }
 
 
-.icon__burger{
+
+.icon--burger{
 position: relative;
 }
 .header__splitter-element-1{
     display: none;
 }
 
-.icon__burger span, .icon__burger::before, .icon__burger::after{
+.icon--burger span, .icon--burger::before, .icon--burger::after{
 position: absolute;
 background-color: #fff;
 border-radius: 1px;
@@ -61,53 +68,55 @@ height: 2px;
 left: 11px;
 }
 
-.icon__burger::before, .icon__burger::after{
+.icon--burger::before, .icon--burger::after{
 content: "";
 }
 
-.icon__burger::before{
+.icon--burger::before{
 top: 12px;
 width: 18px;
 }
 
-.icon__burger span{
+.icon--burger span{
 width: 10px;
 top: 19px;
 }
 
-.icon__burger::after{
+.icon--burger::after{
  width: 14px;
  top: 26px;
 }
 
-.header__logo img{
-width: 96px;
-height: 50px;
+.header__logo {
+position: relative;
+  img {
+    width: 96px;
+    height: 50px;
+  }
 }
-
 .icon{
 display: flex;
 width: 40px;
 height: 40px;
 border-radius: 50%;
 background-color: #FF3E79;
-border: 0;
 justify-content: center;
 align-items: center;
-cursor: pointer;
 }
 
-.icon__repair{
+.icon--repair{
 position: relative;
 }
-
-.header__splitter-element-2{
-display: block;
-border: 1px solid #EAEAEA ;
-height: 32px;
+.icon--repair::before{
+    content: "";
+    position: absolute;
+    border: 1px solid #EAEAEA;
+    height: 32px;
+    left: -23px;
 }
 
-.icon__phone,.icon__message,.icon__human{
+
+.icon--phone,.icon--message,.icon--human{
 display: none;
 }
 
@@ -134,11 +143,11 @@ border-radius: 50px;
 left: -17px;
 }
 
-.services__slider{
+.services__menu{
 margin: 0 -16px 24px -16px;
 }
 
-.slider__row{
+.menu__row{
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -146,7 +155,7 @@ position: relative;
 overflow: hidden;
 }
 
-.slider__row::before, .slider__row::after {
+.menu__row::before, .menu__row::after {
 content: "";
 width: 24px;
 height: 40px;
@@ -154,12 +163,12 @@ position: absolute;
 background: linear-gradient(90deg, #f8f8f8 20%, transparent 70%);
 }
 
-.slider__row::after{
+.menu__row::after{
 right: 0;
 background: linear-gradient(270deg, #f8f8f8 20%, transparent 70%);
 }
 
-.slider__items{
+.menu__items{
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -168,7 +177,7 @@ list-style: none;
 scrollbar-width: none;
 }
 
-.slider__item{
+.menu__item{
 padding: 8px 16px ;
 white-space: nowrap;
 letter-spacing: -0.2px;
@@ -179,7 +188,7 @@ letter-spacing: -0.2px;
 }
 }
 
-.slider__item--active{
+.menu__item--active{
 border: 2px solid #B8FFEC;
 border-radius: 6px;
 background-color: #fff;
@@ -198,8 +207,6 @@ letter-spacing: 0.2px;
 max-height: 90px;
 overflow: hidden;
 }
-
-
 
 .about-us__text-continuation{
 line-height: 24px;
@@ -245,21 +252,30 @@ img{
 }
 
 @media (min-width: 768px) and (max-width: 1119px) {
-    .icon__phone,.icon__message,.icon__human{
+    .icon--phone,.icon--message,.icon--human{
         display: flex;
         }
         .about-us__text p{
             max-width: 312px
         }
+        .header__part-one{
+            gap:42px ;
+        }
+.header__logo::before{
+        content: "";
+        position: absolute;
+        left: -20px;
+        top: 9px;
+        border: 1px solid #EAEAEA ;
+        height: 32px;
+}
+.icon--human{
+margin-right: 25px;
+}
+.icon--repair::before{
+left: -20px;
+}
 
-    .header__splitter-element-1{
-    display: block;
-    border: 1px solid #EAEAEA ;
-    height: 32px;
- }
- .header__splitter-element-2{
-margin: 0 4px;
- }
 }
 @media (min-width:1119px){
 .container{
@@ -267,6 +283,9 @@ margin: 0 4px;
 }
     .header{
         display: none;
+    }
+    .icon--repair::before{
+        height: 0;
     }
     .services__buttons{
         display: flex;
@@ -284,12 +303,12 @@ margin: 0 4px;
     .services__title::before{
         left: -32px;
     }
-    .slider__items{
+    .menu__items{
         overflow-x: hidden;
         flex-wrap: wrap;
         margin-left:20px ;
     }
-    .slider__item--active{
+    .menu__item--active{
         margin-left: 0;
     }
 
