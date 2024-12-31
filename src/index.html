@@ -7,27 +7,27 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="overlay"></div>
     <div class="wrapper">
       <header class="header">
         <div class="container">
           <div class="header__row">
             <div class="header__part-one">
-              <button class="icon icon--burger">
+              <button class="icon icon--burger header__burger">
                 <span></span>
               </button>
-              <span class="header__splitter-element-1"></span>
               <a class="header__logo" href="#">
                 <img src="./img/logo/Group.svg" alt="" />
               </a>
             </div>
             <div class="header__part-two">
-              <button class="icon icon--phone">
+              <button class="icon icon--phone header__icon">
                 <img src="./img/icons/icon-phone.svg" alt="phone Icon" />
               </button>
-              <button class="icon icon--message">
+              <button class="icon icon--message header__icon">
                 <img src="./img/icons/icon-message.svg" alt="message Icon" />
               </button>
-              <button class="icon icon--human">
+              <button class="icon icon--human header__icon">
                 <img src="./img/icons/icon-human.svg" alt="human Icon" />
               </button>
               <button class="icon icon--repair">
@@ -40,6 +40,73 @@
           </div>
         </div>
       </header>
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div class="sidebar-header__logo">
+            <img src="./img/logo/Group.svg" alt="#" />
+          </div>
+          <div class="sidebar-header__icon">
+            <button class="icon icon--search">
+              <img src="./img/icons/icon-search.svg" alt="#" />
+            </button>
+          </div>
+        </div>
+        <nav class="sidebar-menu">
+          <ul class="sidebar-menu__menu-list">
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#">Ремонт техники</a>
+            </li>
+            <li class="sidebar-menu__menu-item sidebar-menu__menu-item--active">
+              <a class="sidebar-menu__menu-link" href="#">Услуги и сервисы</a>
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#"
+                >Корпоративным клиентам</a
+              >
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#">Продавцам техники</a>
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#">Партнерам</a>
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#">Производителям</a>
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#"
+                >Наши сервисные центры</a
+              >
+            </li>
+            <li class="sidebar-menu__menu-item">
+              <a class="sidebar-menu__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="sidebar-footer__connection">
+            <button class="icon icon--phone sidebar-footer__icon">
+              <img src="./img/icons/icon-phone.svg" alt="phone Icon" />
+            </button>
+            <button class="icon icon--message sidebar-footer__icon">
+              <img src="./img/icons/icon-message.svg" alt="message Icon" />
+            </button>
+            <button class="icon icon--human sidebar-footer__icon">
+              <img src="./img/icons/icon-human.svg" alt="human Icon" />
+            </button>
+          </div>
+          <div class="sidebar-footer__mail">mail@cps.com</div>
+          <div class="sidebar-footer__phone-number">8 800 890 8900</div>
+          <div class="sidebar-footer__language-selection">
+            <button
+              class="sidebar-footer__language sidebar-footer__language--active"
+            >
+              RU</button
+            ><button class="sidebar-footer__language">EN</button
+            ><button class="sidebar-footer__language">CH</button>
+          </div>
+        </div>
+      </aside>
       <main class="main">
         <section class="services">
           <div class="container">
@@ -48,15 +115,15 @@
               <div class="services__buttons">
                 <div class="services__button">
                   <label for="repair">Оставить заявку</label>
-                  <span class="icon icon__repair" id="repair"
-                    ><img src="./img/icons/Group.svg" alt=""
-                  /></span>
+                  <button class="icon icon--repair">
+                    <img src="./img/icons/Group.svg" alt="repair Icon" />
+                  </button>
                 </div>
                 <div class="services__button">
                   <label for="checkstatus">Статус ремонта</label>
-                  <span class="icon icon__checkstatus" id="checkstatus"
-                    ><img src="./img/icons/icon.svg" alt=""
-                  /></span>
+                  <button class="icon icon--checkstatus">
+                    <img src="./img/icons/icon.svg" alt="check status icon" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -111,5 +178,6 @@
         </section>
       </main>
     </div>
+    <script src="./script/script.js"></script>
   </body>
 </html>
