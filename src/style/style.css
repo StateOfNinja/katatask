@@ -19,10 +19,9 @@ border: none;
 cursor: pointer;
 }
 
-button:hover{
-
+button:hover, a:hover{
 filter: brightness(90%) saturate(120%);
-opacity: 0.9;
+opacity: 0.4;
 }
 
 a{
@@ -198,7 +197,7 @@ left: -25px;
 margin: 0 -16px 24px -16px;
 }
 
-.menu__row{
+.services__menu-row{
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -206,7 +205,7 @@ position: relative;
 overflow: hidden;
 }
 
-.menu__row::before, .menu__row::after {
+.services__menu-row::before, .services__menu-row::after {
 content: "";
 width: 24px;
 height: 40px;
@@ -214,12 +213,12 @@ position: absolute;
 background: linear-gradient(90deg, #f8f8f8 20%, transparent 70%);
 }
 
-.menu__row::after{
+.services__menu-row::after{
 right: 0;
 background: linear-gradient(270deg, #f8f8f8 20%, transparent 70%);
 }
 
-.menu__items{
+.services__menu-items{
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -227,7 +226,7 @@ overflow-x: scroll;
 scrollbar-width: none;
 }
 
-.menu__item{
+.services__menu-item{
 padding: 8px 16px ;
 white-space: nowrap;
 letter-spacing: -0.2px;
@@ -238,7 +237,7 @@ letter-spacing: -0.2px;
 }
 }
 
-.menu__item--active{
+.services__menu-item--active{
 border: 2px solid #B8FFEC;
 border-radius: 6px;
 background-color: #fff;
@@ -318,21 +317,22 @@ justify-content: space-between;
 height: 50px;
 }
 
-.sidebar-menu {
+.menu {
 flex-grow: 1;
 }
 
-.sidebar-menu__menu-item{
+.menu__item{
 margin-bottom: 28px;
 line-height: 24px;
 letter-spacing: -0.2px;
 }
 
-.sidebar-menu__menu-item--active{
+.menu__item--active{
 position: relative;
 color: #7e7e82;
 }
-.sidebar-menu__menu-item--active::before{
+
+.menu__item--active::before{
 content: "";
 width: 4px;
 height: 29px;
@@ -367,18 +367,25 @@ font-weight: 600;
 margin-bottom: 40px;
 }
 
-.sidebar-footer__language-selection{
+.language-selection{
 display: flex;
 gap: 7px;
 }
 
-.sidebar-footer__language{
+.language-selection__item{
 line-height: 24px;
 letter-spacing: -0.2px;
 }
 
-.sidebar-footer__language--active{
+.language-selection__button--active{
 color: #7E7E82;
+}
+
+.title{
+line-height: 24px;
+letter-spacing: -0.2px;
+color: #7E7E82;
+padding: 16px;
 }
 
 @media(max-width:768px){
@@ -468,12 +475,12 @@ left: -20px;
     .services__title::before{
         left: -32px;
     }
-    .menu__items{
+    .services__menu-items{
         overflow-x: hidden;
         flex-wrap: wrap;
         margin-left:20px ;
     }
-    .menu__item--active{
+    .services__menu-item--active{
         margin-left: 0;
     }
 
