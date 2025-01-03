@@ -174,13 +174,16 @@ left: -23px;
 background-color:  #F8F8F8;
 }
 
+.services__content{
+padding: 24px 0;
+}
+
 .services__title{
 font-size: 28px;
 line-height: 40px;
 letter-spacing: -0.6px;
 position: relative;
 font-weight: 700;
-padding:  24px 0;
 }
 
 .services__title::before{
