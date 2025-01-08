@@ -1,3 +1,5 @@
+@import url(https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css);
+
     /* Font */
 
 @import url(../style/fonts/stylesheet.css);
@@ -58,10 +60,17 @@ overflow: hidden;
 margin: 0 auto;
 }
 
+.shell{
+max-width: 1440px;
+width: 100%;
+overflow: hidden;
+margin: 0 auto;
+}
+
 .container{
 max-width:  1440px;
 width: 100%;
-padding: 0 24px;
+padding: 0 16px;
 margin: 0 auto;
 }
 
@@ -174,13 +183,16 @@ left: -23px;
 background-color:  #F8F8F8;
 }
 
+.services__content{
+padding: 24px 0;
+}
+
 .services__title{
 font-size: 28px;
 line-height: 40px;
 letter-spacing: -0.6px;
 position: relative;
 font-weight: 700;
-padding:  24px 0;
 }
 
 .services__title::before{
@@ -224,6 +236,7 @@ justify-content: flex-start;
 align-items: center;
 overflow-x: scroll;
 scrollbar-width: none;
+
 }
 
 .services__menu-item{
@@ -249,27 +262,37 @@ display: flex;
 flex-direction: column;
 }
 
-.about-us__text p{
+.about-us__text-content{
 font-size: 14px;
 line-height: 18px;
 letter-spacing: 0.2px;
 max-height: 90px;
 overflow: hidden;
+transition: max-height 0.3s ease-in-out;
 }
 
-.about-us__text-continuation{
+
+.continuation{
 line-height: 24px;
 letter-spacing: -0.2px;
 font-weight: 500;
-margin: 16px 0;
 position: relative;
-margin-left: 32px;
 }
 
-.about-us__text-continuation::before{
+.about-us__text-continuation{
+margin: 16px 32px;
+}
+
+.continuation::before{
 position: absolute;
 content: url(../img/icons/icon-expand.svg);
 left: -32px;
+}
+
+.continuation--expanded::before{
+transform: rotate(180deg);
+transition: transform 0.2s ease-out;
+top: -8px;
 }
 
 .about-us__img{
@@ -372,28 +395,102 @@ display: flex;
 gap: 7px;
 }
 
-.language-selection__item{
+.language-selection__item {
 line-height: 24px;
 letter-spacing: -0.2px;
 }
 
-.language-selection__button--active{
+.language-selection__button--active {
 color: #7E7E82;
 }
 
-.title{
+.subtitle {
 line-height: 24px;
 letter-spacing: -0.2px;
 color: #7E7E82;
+padding: 16px 0;
+font-weight: normal;
+background-color: #fff;
+}
+
+.repair-brands__slider {
+padding: 16px 0 38px 0;
+}
+
+.swiper {
+display: flex;
+overflow:visible;
+}
+
+.swiper::before, .swiper::after {
+content: "";
+width: 24px;
+height: 81px;
+position: absolute;
+background: linear-gradient(90deg, #f8f8f8 50%, transparent 100%);
+z-index: 10;
+}
+
+.swiper::before{
+left: -24px;
+}
+
+.swiper::after{
+top: -5px;
+right: -24px;
+background: linear-gradient(270deg, #f8f8f8 50%, transparent 100%);
+}
+
+.repair-brands__items{
+margin-bottom: 40px;
+}
+
+.swiper-pagination-bullet{
+width: 12px;
+height: 12px;
+margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+border: 2px solid #b5b6bc;
+background-color: #b5b6bc;
+}
+
+.repair-brands__item{
 padding: 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 240px;
+max-height: 72px;
+border:  1px solid #EAEAEA;
+background-color: #fff;
+border-radius: 6px;
 }
 
-@media(max-width:768px){
+.icon-go{
+display: flex;
+width: 40px;
+height: 40px;
+border: #FF3E79 solid 2px;
+border-radius: 50%;
+justify-content: center;
+align-items: center;
+}
+
+.repair-brands__btn-continuation{
+margin-left: 30px;
+}
+
+@media(max-width:767px){
     .header__icon {
         display: none;
     }
     .sidebar-footer__phone-number{
         margin-bottom: 16px;
+    }
+    .repair-brands__btn-continuation{
+        display: none;
     }
 }
 
@@ -408,9 +505,28 @@ padding: 16px;
             border-radius: 8px 0 0 8px;
          }
     }
-    .about-us__text p{
+    .about-us__text-content{
         max-height: 160px;
         line-height: 20px;
+    }
+    .container{
+        padding: 0 24px;
+    }
+
+    .repair-brands__slider{
+        padding: 24px 0;
+    }
+    .repair-brands__items{
+        max-height: 160px;
+        overflow: hidden;
+        margin: 0;
+        flex-flow: row wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+    }
+    .content--expanded {
+    max-height: 100%;
+    overflow: visible;
     }
 }
 
@@ -421,41 +537,42 @@ padding: 16px;
     .header__icon{
         display: flex;
     }
-        .about-us__text p{
-            max-width: 312px
-        }
-        .header__part-one{
-            gap:42px ;
-        }
-.header__logo::before{
+    .about-us__text-content{
+        max-width: 312px
+    }
+    .header__part-one{
+        gap:42px ;
+    }
+    .header__logo::before{
         content: "";
         position: absolute;
         left: -20px;
         top: 9px;
         border: 1px solid #EAEAEA ;
         height: 32px;
-}
-.icon--human{
-margin-right: 25px;
-}
-.icon--repair::before{
-left: -20px;
+    }
+    .icon--human{
+        margin-right: 25px;
+    }
+    .icon--repair::before{
+        left: -20px;
+    }
+    .repair-brands__item{
+        width: 224px;
+    }
 }
 
-}
 @media (min-width:1119px){
     .wrapper{
     display: grid;
     grid-template-columns: 320px 1fr;
     }
-
     .container{
     padding: 0 32px;
     }
     .header{
         display: none;
     }
-
     .icon--repair::before{
         content: none;
     }
@@ -483,14 +600,16 @@ left: -20px;
     .services__menu-item--active{
         margin-left: 0;
     }
-
     .about-us__content{
         gap: 36px;
     }
-
     .sidebar{
         position: static;
     }
+    .repair-brands__items{
+        column-gap:32px;
+    }
+
 }
 
 
