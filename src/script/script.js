@@ -4,24 +4,6 @@ const overlay = document.querySelector(".overlay");
 const continuationBtn = document.querySelectorAll(".continuation");
 const aboutText = document.querySelector(".about-us__text-content");
 
-// burgerBtn.addEventListener("click", () => {
-//   burgerBtn.classList.toggle("header__burger--active");
-//   sidebar.classList.toggle("sidebar--open");
-//   overlay.classList.toggle("overlay--active");
-// });
-
-// document.addEventListener("click", (e) => {
-//   if (
-//     burgerBtn.classList.contains("header__burger--active") &&
-//     !sidebar.contains(e.target) &&
-//     !burgerBtn.contains(e.target)
-//   ) {
-//     burgerBtn.classList.remove("header__burger--active");
-//     sidebar.classList.remove("sidebar--open");
-//     overlay.classList.remove("overlay--active");
-//   }
-// });
-
 if (window.innerWidth < 768) {
   const swiper = new Swiper(".swiper", {
     direction: "horizontal",
