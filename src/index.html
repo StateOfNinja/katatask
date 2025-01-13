@@ -13,31 +13,110 @@
   <body>
     <div class="overlay"></div>
     <div class="wrapper">
+      <div class="modal modal-feedback">
+        <button
+          class="modal-feedback__close-icon icon icon--close global-btn"
+          aria-label="Закрыть модальное окно"
+        ></button>
+        <h2 class="modal-header">Обратная связь</h2>
+        <form action="" class="form modal-feedback__form">
+          <input
+            type="text"
+            class="input input--name modal-feedback__input-name"
+            placeholder="Имя"
+            aria-label="Введите ваше имя"
+          />
+          <input
+            type="tel"
+            class="input input--tel modal-feedback__input-tel"
+            placeholder="Телефон"
+            aria-label="Введите номер вашего телефона"
+          />
+          <input
+            type="email"
+            class="input input--email modal-feedback__input-email"
+            placeholder="Электронная почта"
+            aria-label="Введите вашу электронную почту"
+          />
+          <textarea
+            name="message"
+            id="feedback-message"
+            class="input input--message modal-feedback__message"
+            placeholder="Сообщение"
+            aria-label="Введите сообщение которое хотите оставить"
+          ></textarea>
+          <div class="consent modal-feedback__consent">
+            <p>
+              Нажимая “отправить”, вы даете согласие на
+              <a href="#" class="global-link link--pink"
+                >обработку персональных данных</a
+              >
+              и соглашаетесь с нашей
+              <a href="#" class="global-link link--pink"
+                >политикой конфиденциальности</a
+              >
+            </p>
+          </div>
+          <button type="submit" class="button button--submit global-btn">
+            Отправить
+          </button>
+        </form>
+      </div>
+      <div class="modal modal-call">
+        <button
+          class="modal-call__close-icon icon icon--close global-btn"
+          aria-label="Закрыть модальное окно"
+        ></button>
+        <h2 class="modal-header">Заказать звонок</h2>
+        <form action="" class="form modal-call__form">
+          <input
+            type="tel"
+            class="input input--tel modal-call__input-tel"
+            placeholder="Телефон"
+            aria-label="Введите номер вашего телефона"
+          />
+          <div class="consent modal-call__consent">
+            <p>
+              Нажимая “отправить”, вы даете согласие на
+              <a href="#" class="global-link link--pink"
+                >обработку персональных данных</a
+              >
+              и соглашаетесь с нашей
+              <a href="#" class="global-link link--pink"
+                >политикой конфиденциальности</a
+              >
+            </p>
+          </div>
+          <button type="submit" class="button button--submit global-btn">
+            Отправить
+          </button>
+        </form>
+      </div>
       <header class="header">
         <div class="container">
           <div class="header__row">
             <div class="header__part-one">
-              <button class="icon icon--burger header__burger">
+              <button class="icon icon--burger header__burger global-btn">
                 <span></span>
               </button>
-              <a class="header__logo" href="#">
+              <a class="header__logo global-link" href="#">
                 <img src="./img/logo/Group.svg" alt="" />
               </a>
             </div>
             <div class="header__part-two">
-              <button class="icon icon--phone header__icon">
+              <button class="icon icon--phone header__icon global-btn">
                 <img src="./img/icons/icon-phone.svg" alt="phone Icon" />
               </button>
-              <button class="icon icon--message header__icon">
+              <button class="icon icon--message header__icon global-btn">
                 <img src="./img/icons/icon-message.svg" alt="message Icon" />
               </button>
-              <button class="icon icon--human header__icon">
+              <button class="icon icon--human header__icon global-btn">
                 <img src="./img/icons/icon-human.svg" alt="human Icon" />
               </button>
-              <button class="icon icon--repair">
+              <button class="icon icon--repair global-btn">
                 <img src="./img/icons/Group.svg" alt="repair Icon" />
               </button>
-              <button class="icon icon--checkstatus">
+              <button class="icon icon--checkstatus global-btn">
                 <img src="./img/icons/icon.svg" alt="check status icon" />
               </button>
             </div>
@@ -47,75 +126,79 @@
       <aside class="sidebar">
         <header class="sidebar-header">
           <img src="./img/logo/Group.svg" alt="#" />
-          <button class="icon icon--search">
+          <button class="icon icon--search global-btn">
             <img src="./img/icons/icon-search.svg" alt="#" />
           </button>
         </header>
         <nav class="menu">
-          <ul class="menu__list">
+          <ul class="menu__list global-list">
             <li class="menu__item">
-              <a class="menu__link" href="#">Ремонт техники</a>
+              <a class="menu__link global-link" href="#">Ремонт техники</a>
             </li>
             <li class="menu__item menu__item--active">
-              <a class="menu__link" href="#">Услуги и сервисы</a>
+              <a class="menu__link global-link" href="#">Услуги и сервисы</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Корпоративным клиентам</a>
+              <a class="menu__link global-link" href="#"
+                >Корпоративным клиентам</a
+              >
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Продавцам техники</a>
+              <a class="menu__link global-link" href="#">Продавцам техники</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Партнерам</a>
+              <a class="menu__link global-link" href="#">Партнерам</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Производителям</a>
+              <a class="menu__link global-link" href="#">Производителям</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Наши сервисные центры</a>
+              <a class="menu__link global-link" href="#"
+                >Наши сервисные центры</a
+              >
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link global-link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
         <footer class="sidebar-footer">
-          <ul class="sidebar-footer__connection">
+          <ul class="sidebar-footer__connection global-list">
             <li class="sidebar-footer__item">
-              <button class="icon icon--phone">
+              <button class="icon icon--phone global-btn">
                 <img src="./img/icons/icon-phone.svg" alt="Phone Icon" />
               </button>
             </li>
             <li class="sidebar-footer__item">
-              <button class="icon icon--message">
+              <button class="icon icon--message global-btn">
                 <img src="./img/icons/icon-message.svg" alt="Message Icon" />
               </button>
             </li>
             <li class="sidebar-footer__item">
-              <button class="icon icon--human">
+              <button class="icon icon--human global-btn">
                 <img src="./img/icons/icon-human.svg" alt="Human Icon" />
               </button>
             </li>
           </ul>
           <div class="sidebar-footer__mail">
-            <a href="mailto:mail@cps.com">mail@cps.com</a>
+            <a href="mailto:mail@cps.com" class="global-link">mail@cps.com</a>
           </div>
           <div class="sidebar-footer__phone-number">
-            <a href="tel:+78008908900">8 800 890 8900</a>
+            <a href="tel:+78008908900" class="global-link">8 800 890 8900</a>
           </div>
-          <ul class="language-selection">
+          <ul class="language-selection global-list">
             <li class="language-selection__item">
               <button
-                class="language-selection__button language-selection__button--active"
+                class="language-selection__button language-selection__button--active global-btn"
               >
                 RU
               </button>
             </li>
             <li class="language-selection__item">
-              <button class="language-selection__button">EN</button>
+              <button class="language-selection__button global-btn">EN</button>
             </li>
             <li class="language-selection__item">
-              <button class="language-selection__button">CH</button>
+              <button class="language-selection__button global-btn">CH</button>
             </li>
           </ul>
         </footer>
@@ -126,13 +209,13 @@
             <div class="services__content">
               <h2 class="services__title">Услуги и сервисы</h2>
               <div class="services__buttons">
-                <button class="services__button">
+                <button class="services__button global-btn">
                   <span>Оставить заявку</span>
                   <span class="icon icon--repair">
                     <img src="./img/icons/Group.svg" alt="repair Icon" />
                   </span>
                 </button>
-                <button class="services__button">
+                <button class="services__button global-btn">
                   <span>Статус ремонта</span>
                   <span class="icon icon--checkstatus">
                     <img src="./img/icons/icon.svg" alt="check status icon" />
@@ -142,23 +225,25 @@
             </div>
             <div class="services__menu">
               <nav class="services__menu-row">
-                <ul class="services__menu-items">
+                <ul class="services__menu-items global-list">
                   <li class="services__menu-item services__menu-item--active">
-                    <a href="#">Ремонтируемые бренды</a>
+                    <a href="#" class="global-link">Ремонтируемые бренды</a>
                   </li>
                   <li class="services__menu-item">
-                    <a href="#">Ремонтируемые устройства</a>
+                    <a href="#" class="global-link">Ремонтируемые устройства</a>
                   </li>
                   <li class="services__menu-item">
-                    <a href="#">Цены на услуги</a>
+                    <a href="#" class="global-link">Цены на услуги</a>
                   </li>
                   <li class="services__menu-item">
-                    <a href="#">Адреса сервисных центров</a>
+                    <a href="#" class="global-link">Адреса сервисных центров</a>
                   </li>
                   <li class="services__menu-item">
-                    <a href="#">Специальные цены</a>
+                    <a href="#" class="global-link">Специальные цены</a>
                   </li>
-                  <li class="services__menu-item"><a href="#">Отзывы</a></li>
+                  <li class="services__menu-item global-link">
+                    <a href="#">Отзывы</a>
+                  </li>
                 </ul>
               </nav>
             </div>
@@ -185,7 +270,7 @@
                   близким.
                 </p>
                 <button
-                  class="about-us__text-continuation continuation"
+                  class="about-us__text-continuation continuation global-btn"
                   data-toggle-class="about-us__text-content"
                 >
                   Читать далее
@@ -207,81 +292,79 @@
           <div class="container">
             <div class="repair-brands__slider slider">
               <div class="swiper">
-                <div class="swiper-wrapper repair-brands__items">
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/lenovo-logo.png" alt="lenovo" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/samsung-logo.png" alt="samsung" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/apple-logo.png" alt="apple" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img
-                      src="./img/logo/viewsonic-logo.png"
-                      alt="viewsonic"
-                    /><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/bosch-logo.png" alt="bosch" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/hp-logo.png" alt="hp" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/acer-logo.png" alt="acer" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/sony-logo.png" alt="sony" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/lenovo-logo.png" alt="lenovo" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/samsung-logo.png" alt="samsung" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-brands__item">
-                    <img src="./img/logo/apple-logo.png" alt="apple" /><span
-                      class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                </div>
+                <ul class="swiper-wrapper repair-brands__items global-list">
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/lenovo-logo.png" alt="lenovo" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/samsung-logo.png" alt="samsung" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/apple-logo.png" alt="apple" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/viewsonic-logo.png" alt="viewsonic" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/bosch-logo.png" alt="bosch" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/hp-logo.png" alt="hp" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/acer-logo.png" alt="acer" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/sony-logo.png" alt="sony" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/lenovo-logo.png" alt="lenovo" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/samsung-logo.png" alt="samsung" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-brands__item">
+                    <img src="./img/logo/apple-logo.png" alt="apple" />
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                </ul>
                 <div class="swiper-pagination repair-brands__pagination"></div>
               </div>
             </div>
             <button
-              class="repair-brands__btn-continuation continuation"
+              class="repair-brands__btn-continuation continuation global-btn"
               data-toggle-class="repair-brands__items"
             >
               Показать все
@@ -295,63 +378,63 @@
           <div class="container">
             <div class="repair-equipments__slider slider">
               <div class="swiper">
-                <div class="swiper-wrapper repair-equipments__items">
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт ноутбуков </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт планшетов </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт ПК </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт мониторов </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт телевизоров </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт самртфонов </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт переферии </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                  <div class="swiper-slide repair-equipments__item">
-                    <span>Ремонт шуруповертов </span
-                    ><span class="icon-go"
-                      ><img src="./img/icons/dropdown.svg" alt=""
-                    /></span>
-                  </div>
-                </div>
+                <ul class="swiper-wrapper repair-equipments__items">
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт ноутбуков </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт планшетов </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт ПК </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт мониторов </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт телевизоров </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт самртфонов </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт переферии </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                  <li class="swiper-slide repair-equipments__item">
+                    <span>Ремонт приставок </span>
+                    <button class="icon-go global-btn">
+                      <img src="./img/icons/dropdown.svg" alt="" />
+                    </button>
+                  </li>
+                </ul>
                 <div
                   class="swiper-pagination repair-equipments__pagination"
                 ></div>
               </div>
             </div>
             <button
-              class="repair-equipments__btn-continuation continuation"
+              class="repair-equipments__btn-continuation continuation global-btn"
               data-toggle-class="repair-equipments__items"
             >
               Показать все
@@ -363,8 +446,22 @@
           <div class="container">
             <div class="service-prices__slider slider">
               <div class="swiper">
-                <div class="swiper-wrapper service-prices__items">
-                  <div class="swiper-slide service-prices__item">
+                <ul class="swiper-wrapper service-prices__items global-list">
+                  <li class="service-prices__item service-prices__item--head">
+                    <span
+                      class="service-prices__title service-prices__title--visible service-prices__item-part--service"
+                      >Ремонтные услуги</span
+                    >
+                    <span
+                      class="service-prices__title service-prices__title--visible service-prices__item-part--price"
+                      >Цена</span
+                    >
+                    <span
+                      class="service-prices__title service-prices__title--visible service-prices__item-part--period"
+                      >Срок</span
+                    >
+                  </li>
+                  <li class="swiper-slide service-prices__item">
                     <div
                       class="service-prices__item-part service-prices__item-part--service"
                     >
@@ -385,11 +482,13 @@
                       <p class="service-prices__title">Срок</p>
                       <p class="service-prices__text">30-120 мин</p>
                     </div>
-                    <button class="service-prices__order order-btn">
-                      <span class="service-prices__order-text">Заказать</span>
+                    <button
+                      class="button service-prices__order button--order global-btn"
+                    >
+                      <span>Заказать</span>
                     </button>
-                  </div>
-                  <div class="swiper-slide service-prices__item">
+                  </li>
+                  <li class="swiper-slide service-prices__item">
                     <div
                       class="service-prices__item-part service-prices__item-part--service"
                     >
@@ -408,11 +507,13 @@
                       <p class="service-prices__title">Срок</p>
                       <p class="service-prices__text">30 мин</p>
                     </div>
-                    <button class="service-prices__order order-btn">
-                      <span class="service-prices__order-text">Заказать</span>
+                    <button
+                      class="button service-prices__order button--order global-btn"
+                    >
+                      <span>Заказать</span>
                     </button>
-                  </div>
-                  <div class="swiper-slide service-prices__item">
+                  </li>
+                  <li class="swiper-slide service-prices__item">
                     <div
                       class="service-prices__item-part service-prices__item-part--service"
                     >
@@ -431,11 +532,13 @@
                       <p class="service-prices__title">Срок</p>
                       <p class="service-prices__text">30-120 мин</p>
                     </div>
-                    <button class="service-prices__order order-btn">
-                      <span class="service-prices__order-text">Заказать</span>
+                    <button
+                      class="button service-prices__order button--order global-btn"
+                    >
+                      <span>Заказать</span>
                     </button>
-                  </div>
-                  <div class="swiper-slide service-prices__item">
+                  </li>
+                  <li class="swiper-slide service-prices__item">
                     <div
                       class="service-prices__item-part service-prices__item-part--service"
                     >
@@ -456,11 +559,13 @@
                       <p class="service-prices__title">Срок</p>
                       <p class="service-prices__text">30-120 мин</p>
                     </div>
-                    <button class="service-prices__order order-btn">
-                      <span class="service-prices__order-text">Заказать</span>
+                    <button
+                      class="button service-prices__order button--order global-btn"
+                    >
+                      <span>Заказать</span>
                     </button>
-                  </div>
-                  <div class="swiper-slide service-prices__item">
+                  </li>
+                  <li class="swiper-slide service-prices__item">
                     <div
                       class="service-prices__item-part service-prices__item-part--service"
                     >
@@ -481,16 +586,45 @@
                       <p class="service-prices__title">Срок</p>
                       <p class="service-prices__text">30-120 мин</p>
                     </div>
-                    <button class="service-prices__order order-btn">
-                      <span class="service-prices__order-text">Заказать</span>
+                    <button
+                      class="button service-prices__order button--order global-btn"
+                    >
+                      <span>Заказать</span>
                     </button>
-                  </div>
-                </div>
+                  </li>
+                </ul>
                 <div class="swiper-pagination service-prices__pagination"></div>
               </div>
             </div>
+            <div class="service-prices__disclaimer">
+              Все цены указаны с учетом НДС. Стоимость ремонта указана на
+              единичную услугу. Для получения коммерческого предложения на
+              постоянное обслуживание, оставьте заявку.
+            </div>
+            <div class="service-prices__proposal">
+              <a href="" class="global-link"
+                >Получить коммерческое предложение</a
+              >
+            </div>
           </div>
         </section>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__info">
+              <div class="development-info">
+                <p>© 2019 CPS</p>
+                <p>Разработано командой Apesong</p>
+              </div>
+              <div class="confidentiality-info">
+                <a href="" class="global-link">Политика конфиденциальности</a>
+              </div>
+              <div class="notification-info">
+                Информация, размещенная на данной странице, не является
+                публичной офертой
+              </div>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
