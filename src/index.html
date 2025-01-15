@@ -99,7 +99,7 @@
               <button class="icon icon--burger header__burger global-btn">
                 <span></span>
               </button>
-              <a class="header__logo global-link" href="#">
+              <a class="logo header__logo global-link" href="#">
                 <img src="./img/logo/Group.svg" alt="" />
               </a>
             </div>
@@ -124,84 +124,95 @@
         </div>
       </header>
       <aside class="sidebar">
-        <header class="sidebar-header">
-          <img src="./img/logo/Group.svg" alt="#" />
-          <button class="icon icon--search global-btn">
-            <img src="./img/icons/icon-search.svg" alt="#" />
-          </button>
-        </header>
-        <nav class="menu">
-          <ul class="menu__list global-list">
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#">Ремонт техники</a>
-            </li>
-            <li class="menu__item menu__item--active">
-              <a class="menu__link global-link" href="#">Услуги и сервисы</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#"
-                >Корпоративным клиентам</a
-              >
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#">Продавцам техники</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#">Партнерам</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#">Производителям</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#"
-                >Наши сервисные центры</a
-              >
-            </li>
-            <li class="menu__item">
-              <a class="menu__link global-link" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <footer class="sidebar-footer">
-          <ul class="sidebar-footer__connection global-list">
-            <li class="sidebar-footer__item">
-              <button class="icon icon--phone global-btn">
-                <img src="./img/icons/icon-phone.svg" alt="Phone Icon" />
-              </button>
-            </li>
-            <li class="sidebar-footer__item">
-              <button class="icon icon--message global-btn">
-                <img src="./img/icons/icon-message.svg" alt="Message Icon" />
-              </button>
-            </li>
-            <li class="sidebar-footer__item">
-              <button class="icon icon--human global-btn">
-                <img src="./img/icons/icon-human.svg" alt="Human Icon" />
-              </button>
-            </li>
-          </ul>
-          <div class="sidebar-footer__mail">
-            <a href="mailto:mail@cps.com" class="global-link">mail@cps.com</a>
-          </div>
-          <div class="sidebar-footer__phone-number">
-            <a href="tel:+78008908900" class="global-link">8 800 890 8900</a>
-          </div>
-          <ul class="language-selection global-list">
-            <li class="language-selection__item">
+        <div class="sidebar-wrapper">
+          <header class="sidebar-header">
+            <div class="sidebar-header__part">
               <button
-                class="language-selection__button language-selection__button--active global-btn"
-              >
-                RU
-              </button>
-            </li>
-            <li class="language-selection__item">
-              <button class="language-selection__button global-btn">EN</button>
-            </li>
-            <li class="language-selection__item">
-              <button class="language-selection__button global-btn">CH</button>
-            </li>
-          </ul>
-        </footer>
+                class="icon sidebar-header__close icon--close global-btn"
+              ></button>
+              <img src="./img/logo/Group.svg" alt="#" />
+            </div>
+            <button class="icon icon--search global-btn">
+              <img src="./img/icons/icon-search.svg" alt="#" />
+            </button>
+          </header>
+          <nav class="menu">
+            <ul class="menu__list global-list">
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#">Ремонт техники</a>
+              </li>
+              <li class="menu__item menu__item--active">
+                <a class="menu__link global-link" href="#">Услуги и сервисы</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#"
+                  >Корпоративным клиентам</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#">Продавцам техники</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#">Партнерам</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#">Производителям</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#"
+                  >Наши сервисные центры</a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link global-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <footer class="sidebar-footer">
+            <ul class="sidebar-footer__connection global-list">
+              <li class="sidebar-footer__item">
+                <button class="icon icon--phone global-btn">
+                  <img src="./img/icons/icon-phone.svg" alt="Phone Icon" />
+                </button>
+              </li>
+              <li class="sidebar-footer__item">
+                <button class="icon icon--message global-btn">
+                  <img src="./img/icons/icon-message.svg" alt="Message Icon" />
+                </button>
+              </li>
+              <li class="sidebar-footer__item">
+                <button class="icon icon--human global-btn">
+                  <img src="./img/icons/icon-human.svg" alt="Human Icon" />
+                </button>
+              </li>
+            </ul>
+            <div class="sidebar-footer__mail">
+              <a href="mailto:mail@cps.com" class="global-link">mail@cps.com</a>
+            </div>
+            <div class="sidebar-footer__phone-number">
+              <a href="tel:+78008908900" class="global-link">8 800 890 8900</a>
+            </div>
+            <ul class="language-selection global-list">
+              <li class="language-selection__item">
+                <button
+                  class="language-selection__button language-selection__button--active global-btn"
+                >
+                  RU
+                </button>
+              </li>
+              <li class="language-selection__item">
+                <button class="language-selection__button global-btn">
+                  EN
+                </button>
+              </li>
+              <li class="language-selection__item">
+                <button class="language-selection__button global-btn">
+                  CH
+                </button>
+              </li>
+            </ul>
+          </footer>
+        </div>
       </aside>
       <main class="main">
         <section class="services">

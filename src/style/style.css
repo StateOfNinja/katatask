@@ -47,10 +47,12 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.7s ease;
+  overflow: hidden;
 }
 
 .overlay--active {
   opacity: 1;
+  overflow: hidden;
   pointer-events: auto;
 }
 
@@ -123,37 +125,9 @@
   top: 26px;
 }
 
-.header__burger--active {
-  z-index: 3;
-}
-
-.header__burger--active span {
-  transform: scale(0) translate(0px, -50%);
-}
-
-.header__burger--active::before {
-  top: 50%;
-  transform: rotate(-50deg) translate(0px, -50%);
-}
-
-.header__burger--active::after {
-  top: 48%;
-  transform: rotate(50deg) translate(0px, 50%);
-}
-
-.header__burger--active::before,
-.header__burger--active::after {
-  width: 22px;
-  left: 10px;
-}
-
 .header__logo {
   position: relative;
   height: 50px;
-  img {
-    width: 96px;
-    height: 50px;
-  }
 }
 
 .icon {
@@ -327,9 +301,6 @@
 
 .sidebar--open {
   left: 0;
-  .sidebar-header {
-    padding-left: 59px;
-  }
 }
 
 .sidebar-header {
@@ -338,9 +309,10 @@
   align-items: center;
   justify-content: space-between;
 }
-
-.sidebar-header__logo {
-  height: 50px;
+.sidebar-header__part {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .menu {
@@ -637,7 +609,7 @@
 
 .modal {
   position: fixed;
-  right: -100%;
+  right: -200%;
   top: 0;
   max-width: 440px;
   height: 100%;
@@ -645,7 +617,7 @@
   padding: 24px 16px 75px 16px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.7s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 .modal--active {
@@ -669,7 +641,7 @@
 }
 
 .icon--close::after {
-  top: 48%;
+  top: 47%;
   transform: rotate(50deg) translate(0px, 50%);
 }
 
@@ -809,13 +781,12 @@
   }
   .service-prices__items {
     row-gap: 0;
-    padding: 0 16px;
     background-color: #fff;
     border-radius: 6px;
     max-height: 100%;
   }
   .service-prices__item {
-    padding: 16px 0;
+    padding: 16px;
     max-width: 100%;
     height: 100%;
     grid-template-columns: 350px 74px 81px;
@@ -868,6 +839,12 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .service-prices__item--head {
+    gap: 105px;
+  }
+}
+
 @media (min-width: 1440px) {
   .wrapper {
     display: grid;
@@ -911,11 +888,22 @@
   }
   .sidebar {
     position: static;
+    height: 100%;
+    z-index: 1;
+  }
+  .sidebar-header__close {
+    display: none;
   }
   .swiper-wrapper {
     column-gap: 32px;
   }
   .heading {
     padding: 16px 32px;
+  }
+  .service-prices__item--head {
+    gap: 132px;
+  }
+  .overlay--active {
+    z-index: 3;
   }
 }
