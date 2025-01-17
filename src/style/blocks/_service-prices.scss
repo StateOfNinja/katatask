@@ -1,0 +1,140 @@
+@use "../base/colors";
+
+.service-prices {
+  padding-bottom: 40px;
+
+  &__slider {
+    padding: 16px 0 0;
+  }
+
+  &__items {
+    margin-bottom: 40px;
+
+    @media (min-width: 768px) {
+      row-gap: 0;
+      background-color: #fff;
+      border-radius: 6px;
+      max-height: 100%;
+    }
+  }
+
+  &__item {
+    height: 200px;
+    max-width: 260px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 16px;
+    grid-template-areas:
+      "service service"
+      "price ."
+      "period order";
+
+    @media (min-width: 768px) {
+      padding: 16px;
+      max-width: 100%;
+      height: 100%;
+      grid-template-columns: 350px 74px 81px;
+      grid-template-areas: "service price period order";
+      column-gap: 21px;
+      border: none;
+      border-bottom: 1px solid #eaeaea;
+      border-radius: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__item-part {
+    align-self: center;
+
+    &--service {
+      grid-area: service;
+    }
+
+    &--price {
+      grid-area: price;
+    }
+
+    &--period {
+      grid-area: period;
+    }
+  }
+
+  &__order {
+    grid-area: order;
+    align-self: end;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: #7e7e82;
+    line-height: 16px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  &__disclaimer {
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    font-size: 14px;
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      width: 420px;
+    }
+  }
+
+  &__proposal {
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    width: 192px;
+    position: relative;
+
+    &::after {
+      content: url(/src/img/icons/dropdown.svg);
+      position: absolute;
+      right: 74px;
+      bottom: -2px;
+    }
+
+    @media (min-width: 768px) {
+      width: 100%;
+      &::after {
+        left: 300px;
+      }
+    }
+  }
+
+  &__item--head {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: grid;
+      width: 100%;
+      border-bottom: none;
+      background-color: #f8f8f8;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 105px;
+    }
+
+    @media (min-width: 1440px) {
+      gap: 132px;
+    }
+  }
+
+  &__title--visible {
+    display: block;
+  }
+}

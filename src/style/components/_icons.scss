@@ -1,0 +1,70 @@
+@use "../base/colors";
+
+.icon-go {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: $pink solid 2px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $pink;
+  justify-content: center;
+  align-items: center;
+
+  &--repair {
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $slide-border;
+      height: 32px;
+      left: -20px;
+    }
+  }
+  &--close {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      left: 10px;
+      border-radius: 1px;
+      background-color: $white;
+      top: 50%;
+      transform: rotate(-50deg) translate(0px, -50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      left: 10px;
+      border-radius: 1px;
+      background-color: $white;
+      top: 47%;
+      transform: rotate(50deg) translate(0px, 50%);
+    }
+  }
+  @media (min-width: 768px) {
+    &--human {
+      margin-right: 25px;
+    }
+    &--repair::before {
+      left: -20px;
+    }
+  }
+  @media (min-width: 1440px) {
+    &--repair::before {
+      content: none;
+    }
+  }
+}

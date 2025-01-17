@@ -1,0 +1,17 @@
+@use "../base/colors";
+
+.language-selection {
+  display: flex;
+  gap: 7px;
+
+  &__item {
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  &__button {
+    &--active {
+      color: $text-gray;
+    }
+  }
+}

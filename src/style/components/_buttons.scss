@@ -1,0 +1,56 @@
+@use "../base/colors";
+
+.global-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    filter: brightness(90%) saturate(120%);
+    opacity: 0.4;
+  }
+}
+.button {
+  color: $white;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: left;
+  background-color: $pink;
+  border-radius: 16px;
+  padding: 4px 12px;
+  position: relative;
+  width: 119px;
+  height: 32px;
+  &::after {
+    content: url(/src/img/icons/dropdown-white.svg);
+    position: absolute;
+    right: 15px;
+    top: 9px;
+  }
+  &--submit {
+    align-self: end;
+  }
+}
+.continuation {
+  display: none;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url(/src/img/icons/icon-expand.svg);
+    left: -32px;
+  }
+
+  &--expanded::before {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-out;
+    top: -8px;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}

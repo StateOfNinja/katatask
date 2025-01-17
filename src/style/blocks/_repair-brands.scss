@@ -1,0 +1,17 @@
+.repair-brands {
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+  &__items {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    max-height: 72px;
+    align-items: center;
+  }
+
+  &__btn-continuation {
+    margin-left: 30px;
+  }
+}

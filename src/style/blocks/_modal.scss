@@ -1,0 +1,43 @@
+@use "../base/colors";
+
+.modal {
+  position: fixed;
+  right: -200%;
+  top: 0;
+  max-width: 440px;
+  height: 100%;
+  background-color: $white;
+  padding: 24px 16px 75px 16px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.7s ease;
+  z-index: 3;
+
+  &--active {
+    right: 0;
+  }
+
+  &__header {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    position: relative;
+    font-weight: 700;
+    padding: 40px 0 24px;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      position: absolute;
+      background-color: $title-decoration;
+      border-radius: 50px;
+      left: -16px;
+    }
+  }
+
+  &__consent {
+    font-size: 14px;
+    color: $text-gray;
+    line-height: 16px;
+  }
+}

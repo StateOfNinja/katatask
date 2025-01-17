@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+input,
+button,
+textarea {
+  outline: none;
+  font-family: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

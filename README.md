@@ -1,4 +1,4 @@
 Слайдер
 
 
-[Выполненное задание](https://stateofninja.github.io/katatask/src)
+[Выполненное задание](https://stateofninja.github.io/katatask/dist)

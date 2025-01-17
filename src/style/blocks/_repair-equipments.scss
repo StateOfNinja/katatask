@@ -1,0 +1,19 @@
+.repair-equipments {
+  padding-bottom: 32px;
+
+  &__items {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    height: 160px;
+
+    > .icon-go {
+      align-self: flex-end;
+    }
+  }
+
+  &__btn-continuation {
+    margin-left: 30px;
+  }
+}

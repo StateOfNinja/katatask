@@ -1,0 +1,98 @@
+@use "../base/colors";
+
+.header {
+  height: 88px;
+  padding: 18px 0;
+  border-bottom: 1px solid $divider-color;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__part-one {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__part-two {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__logo {
+    position: relative;
+    height: 50px;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  &__burger {
+    position: relative;
+
+    span {
+      position: absolute;
+      background-color: $white;
+      border-radius: 1px;
+      height: 2px;
+      left: 11px;
+      transition: all 0.3s ease 0s;
+      width: 10px;
+      top: 19px;
+    }
+
+    &::before {
+      position: absolute;
+      background-color: $background-page;
+      border-radius: 1px;
+      height: 2px;
+      left: 11px;
+      transition: all 0.3s ease 0s;
+      content: "";
+      top: 12px;
+      width: 18px;
+    }
+
+    &::after {
+      position: absolute;
+      background-color: $background-page;
+      border-radius: 1px;
+      height: 2px;
+      left: 11px;
+      transition: all 0.3s ease 0s;
+      content: "";
+      width: 14px;
+      top: 26px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__icon {
+      display: flex;
+    }
+    &__part-one {
+      gap: 42px;
+    }
+    &__logo::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      top: 9px;
+      border: 1px solid $slide-border;
+      height: 32px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}

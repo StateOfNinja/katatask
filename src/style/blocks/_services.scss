@@ -1,0 +1,112 @@
+@use "../base/colors";
+
+.services {
+  &__content {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    position: relative;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      position: absolute;
+      background-color: $title-decoration;
+      border-radius: 50px;
+      left: -17px;
+      @media (min-width: 768px) {
+        left: -25px;
+      }
+      @media (min-width: 1440px) {
+        left: -32px;
+      }
+    }
+  }
+
+  &__menu {
+    margin: 0 -16px 5px -16px;
+  }
+
+  &__menu-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 24px;
+      height: 40px;
+      position: absolute;
+      background: linear-gradient(90deg, #f8f8f8 20%, transparent 70%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(270deg, #f8f8f8 20%, transparent 70%);
+    }
+  }
+
+  &__menu-items {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+
+    @media (min-width: 1440px) {
+      overflow-x: hidden;
+      flex-wrap: wrap;
+      margin-left: 15px;
+    }
+  }
+
+  &__menu-item {
+    padding: 10px 16px;
+    white-space: nowrap;
+    letter-spacing: -0.2px;
+    margin-bottom: 5px;
+
+    > a {
+      text-decoration: none;
+      color: $text-gray;
+      font-weight: 500;
+    }
+
+    &--active {
+      border: 2px solid $border-active;
+      border-radius: 6px;
+      background-color: $white;
+      margin-left: 16px;
+
+      @media (min-width: 1440px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__buttons {
+    display: none;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      gap: 32px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

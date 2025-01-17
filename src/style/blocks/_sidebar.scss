@@ -1,0 +1,81 @@
+@use "../base/colors";
+
+.sidebar {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: left 0.7s ease;
+  padding: 0 21px;
+  background-color: $white;
+  z-index: 2;
+
+  &--open {
+    left: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &-header {
+    display: flex;
+    padding: 18px 0 46px 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-header__part {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__menu-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &-footer__connection {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &-footer__mail {
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 12px;
+  }
+
+  &-footer__phone-number {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    &-footer__phone-number {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    position: static;
+    height: 100%;
+    z-index: 1;
+
+    &__wrapper {
+      height: 900px;
+    }
+
+    &-header__close {
+      display: none;
+    }
+  }
+}

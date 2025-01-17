@@ -1,4 +1,6 @@
-import "../style/styles.scss";
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+
 
 const burgerBtn = document.querySelector(".header__burger");
 const sidebar = document.querySelector(".sidebar");
@@ -83,3 +85,6 @@ document.addEventListener("click", (e) => {
     }
   }
 });
+
+/******/ })()
+;

@@ -1,0 +1,27 @@
+@use "../base/colors";
+
+.menu {
+  flex-grow: 1;
+
+  &__item {
+    margin-bottom: 28px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+    &--active {
+      position: relative;
+      color: $text-gray;
+
+      &::before {
+        content: "";
+        width: 4px;
+        height: 29px;
+        position: absolute;
+        background-color: #41f6d7;
+        border-radius: 50px;
+        left: -20px;
+        top: -3px;
+      }
+    }
+  }
+}

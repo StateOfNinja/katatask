@@ -1,0 +1,76 @@
+@use "../base/colors";
+
+.slider {
+  padding: 16px 0 24px 0;
+
+  @media (min-width: 768px) {
+    padding: 24px 0;
+  }
+}
+
+.swiper {
+  display: flex;
+  overflow: visible;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 24px;
+    height: 81px;
+    position: absolute;
+    background: linear-gradient(90deg, #f8f8f8 50%, transparent 100%);
+    z-index: 10;
+  }
+
+  &::before {
+    left: -24px;
+  }
+
+  &::after {
+    top: -5px;
+    right: -24px;
+    background: linear-gradient(270deg, #f8f8f8 50%, transparent 100%);
+  }
+
+  &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+  }
+
+  &-pagination-bullet-active {
+    border: 2px solid #b5b6bc;
+    background-color: #b5b6bc;
+  }
+
+  &-slide {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    border-radius: 6px;
+  }
+
+  &-wrapper {
+    @media (min-width: 768px) {
+      overflow: hidden;
+      margin: 0;
+      flex-flow: row wrap;
+      column-gap: 24px;
+      row-gap: 16px;
+      max-height: 160px;
+    }
+
+    @media (min-width: 1440px) {
+      column-gap: 32px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    &-slide {
+      max-width: 224px;
+    }
+  }
+}
